@@ -15,13 +15,13 @@ void Method(const FunctionCallbackInfo<Value>& args) {
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
 }
 
-/*void Test(const FunctionCallbackInfo<Value>& args) {
+void Test(const FunctionCallbackInfo<Value>& args) {
 	int32_t a = 3;
 	int32_t b = 4;
 	Isolate* isolate = args.GetIsolate();
 	Local<Number> num = Number::New(isolate, (a+b));
     args.GetReturnValue().Set(num);
-}*/
+}
 	
  void add(const FunctionCallbackInfo<Value>& args) {
         Isolate* isolate = args.GetIsolate();
@@ -34,8 +34,8 @@ void Method(const FunctionCallbackInfo<Value>& args) {
     }
 void init(Local<Object> exports) {
   NODE_SET_METHOD(exports, "hello", Method);
-  //NODE_SET_METHOD(exports, "test", Test);
-	NODE_SET_METHOD(exports,"add",add);
+  NODE_SET_METHOD(exports, "test", Test);
+  NODE_SET_METHOD(exports,"add",add);
 }
 
 NODE_MODULE(demo, init)

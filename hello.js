@@ -12,10 +12,11 @@ http.createServer(function (request, response) {
    // Send the response body as "Hello World"
    response.write(addon.hello());
    response.write((addon.add(3,5)).toString());
+   response.write(addon.test().toString());
    if(request.url === '/zoho')
-	   response.write('Ganesh and nandu at zoho')
+	   response.write(' Ganesh and nandu at zoho')
    else
-	   response.write('Ganesh and nandu at Any company');
+	   response.write(' Ganesh and nandu at Any company');
    response.end('<html><body><form><h1>Friends</h1><ul><li>Ganesh</li><li>Nandu</li></ul></body></html>\n');
 }).listen(8081);
 
@@ -23,4 +24,6 @@ http.createServer(function (request, response) {
 // Console will print the message
 console.log('Server running at	 http://127.0.0.1:8081/');
 console.log(addon.hello());
+console.log((addon.add(3,5)).toString());
+console.log(addon.test().toString());
 // Prints: 'world'
