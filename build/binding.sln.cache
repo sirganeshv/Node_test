@@ -19,11 +19,11 @@
     <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
   </PropertyGroup>
   <PropertyGroup>
-    <SolutionDir>E:\Node_test\build\</SolutionDir>
+    <SolutionDir>F:\Zoho\Node\Node_test\build\</SolutionDir>
     <SolutionExt>.sln</SolutionExt>
     <SolutionFileName>binding.sln</SolutionFileName>
     <SolutionName>binding</SolutionName>
-    <SolutionPath>E:\Node_test\build\binding.sln</SolutionPath>
+    <SolutionPath>F:\Zoho\Node\Node_test\build\binding.sln</SolutionPath>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
@@ -33,14 +33,14 @@
   <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ">
     <CurrentSolutionConfigurationContents>
       <SolutionConfiguration xmlns="">
-        <ProjectConfiguration Project="{5CC3E204-9D62-89D2-2D09-6F6E8EAD8F85}">Debug|x64</ProjectConfiguration>
+        <ProjectConfiguration Project="{D94FF5F7-47B0-9DDF-9AD6-96DD862AA607}">Debug|x64</ProjectConfiguration>
       </SolutionConfiguration>
     </CurrentSolutionConfigurationContents>
   </PropertyGroup>
   <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ">
     <CurrentSolutionConfigurationContents>
       <SolutionConfiguration xmlns="">
-        <ProjectConfiguration Project="{5CC3E204-9D62-89D2-2D09-6F6E8EAD8F85}">Release|x64</ProjectConfiguration>
+        <ProjectConfiguration Project="{D94FF5F7-47B0-9DDF-9AD6-96DD862AA607}">Release|x64</ProjectConfiguration>
       </SolutionConfiguration>
     </CurrentSolutionConfigurationContents>
   </PropertyGroup>
@@ -53,21 +53,21 @@
     <Error Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" />
   </Target>
   <Target Name="addon" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="E:\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="E:\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
   </Target>
   <Target Name="addon:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="E:\Node_test\build\binding.sln" Clean="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="E:\Node_test\build\binding.sln" Clean="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Clean="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Clean="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
   </Target>
   <Target Name="addon:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="E:\Node_test\build\binding.sln" Rebuild="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="E:\Node_test\build\binding.sln" Rebuild="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Rebuild="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Rebuild="true" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
   </Target>
   <Target Name="addon:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
     <Warning Text="VC projects do not support the &quot;Publish&quot; target." Code="MSB4076" HelpKeyword="MSBuild.SolutionVCProjectNoPublish" />
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="E:\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
-    <VCBuild Projects="E:\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="E:\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Debug|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') " />
+    <VCBuild Projects="F:\Zoho\Node\Node_test\build\addon.vcproj" ToolPath="$(VCBuildToolPath)" Configuration="Release|x64" SolutionFile="F:\Zoho\Node\Node_test\build\binding.sln" Override="$(VCBuildOverride)" AdditionalLibPaths="$(VCBuildAdditionalLibPaths)" UserEnvironment="$(VCBuildUserEnvironment)" AdditionalOptions="$(VCBuildAdditionalOptions)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') " />
   </Target>
   <Target Name="Build" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(CollectedBuildOutput)">
     <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
