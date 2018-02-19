@@ -1,4 +1,5 @@
 #include <node.h>
+#include <iostream>
 
 namespace demo {
 
@@ -10,6 +11,18 @@ using v8::String;
 using v8::Number;
 using v8::Value;
 
+struct testStruct {
+	int a;
+}testInstance;
+
+void print() {
+	std::cout<<"Struct Value is "<<testInstance.a<<"\n";
+}
+
+void setStructValue(int value) {
+	testInstance.a = value;
+}
+
 void Method(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
@@ -20,6 +33,8 @@ void Test(const FunctionCallbackInfo<Value>& args) {
 	int32_t b = 4;
 	Isolate* isolate = args.GetIsolate();
 	Local<Number> num = Number::New(isolate, (a+b));
+	setStructValue(100);
+	print();
     args.GetReturnValue().Set(num);
 }
 	
