@@ -4,8 +4,21 @@ var fs = require('fs');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app     = express();
-var server = http.createServer(function (req, resp) {
-    if (req.url === "/") {
+//Note that in version 4 of express, express.bodyParser() was
+//deprecated in favor of a separate 'body-parser' module.
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+//app.use(express.bodyParser());
+
+app.post('/myaction', function(req, res) {
+	webaddon.printname(req.body.name);
+  res.write('You sent the name "' + req.body.name + '".');
+  res.end();
+  //webaddon.printName(req.body.name);
+});
+
+app.get('/form',function(req,resp) {
+	if (req.url === "/form") {
         fs.readFile("testhtml.html", function (error, pgResp) {
             if (error) {
                 resp.writeHead(404);
@@ -23,19 +36,6 @@ var server = http.createServer(function (req, resp) {
         resp.write('<h1>Product Manaager</h1><br /><br />To create product please enter: ' + req.url);
         resp.end();
     }
-}).listen(8081);
-
-//Note that in version 4 of express, express.bodyParser() was
-//deprecated in favor of a separate 'body-parser' module.
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-//app.use(express.bodyParser());
-
-app.post('/myaction', function(req, res) {
-	webaddon.printname(req.body.name);
-  res.write('You sent the name "' + req.body.name + '".');
-  res.end();
-  //webaddon.printName(req.body.name);
 });
 app.listen(8080, function() {
   console.log('Server running at http://127.0.0.1:8080/');
