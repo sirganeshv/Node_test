@@ -13,9 +13,10 @@ var http = require("http");
 
 
 app.post('/id', function(req, res) {
-	//webaddon.printname(req.body.name);
+	res.writeHead(200, { 'Content-Type': 'text/html' });
 	console.log("going to insert");
-	addon.printname(req.body.id);
+	res.write("writing customer data");
+	addon.printname(req.body.name,req.body.age,req.body.phone,req.body.address,req.body.passphrase,req.body.security_qn,req.body.security_ans);
 	console.log("inserted");
 	res.end();
 });
