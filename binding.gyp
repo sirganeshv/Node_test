@@ -16,7 +16,8 @@
       ],
 	  "libraries": [
             "C:/Users/ganesh-pt1936/Downloads/mysql-connector-c-6.1.11-winx64/lib/libmysql",
-          ]
+          ],
+	  "cflags": [ "-std=c++14" ],
 	}
   ]
 }
