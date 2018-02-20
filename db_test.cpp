@@ -21,9 +21,9 @@ void printname(const FunctionCallbackInfo<Value>& args) {
 	strcpy(customer.customer_name,name.c_str());
 	customer.age = args[1]->NumberValue();	
 	int32_t phone_no = args[2]->NumberValue();
-	cout<<"Numeric "<<phone_no;
+	//cout<<"Numeric "<<phone_no;
 	strcpy(customer.phone_no,std::to_string(phone_no).c_str());	
-	cout<<customer.phone_no;
+	//cout<<customer.phone_no;
 	v8::String::Utf8Value param2(args[3]->ToString());
 	std::string address = std::string(*param2);
 	strcpy(customer.address,address.c_str());
