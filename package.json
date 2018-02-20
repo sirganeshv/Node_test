@@ -2,5 +2,8 @@
   "main": "./html.js",
   "name": "webaddon",
   "description": "Addon Test",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
