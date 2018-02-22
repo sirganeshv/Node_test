@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>jsonp test</title>
+		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+		<script type="text/javascript">
+            $(function(){				
+                $('#select_link').click(function(e){
+                    //e.preventDefault();
+					//alert($('#name').val());
+                    console.log('select_link clicked');
+                    
+                     /*$.ajax({
+                        dataType: 'jsonp',
+                        data: "data=yeah",						
+                        jsonp: 'callback',
+                        url: 'http://localhost:3000/endpoint?callback=?',						
+                        success: function(data) {
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+                        }
+                    });*/
+					var dataa = {
+					"name" : $('#name').val()};
+					alert(dataa.name);
+					
+					$.ajax({
+						type: 'POST',
+						data: JSON.stringify(dataa),
+				        contentType: 'application/json',
+                        url: '/endpoint',						
+                        success: function(data) {
+							alert("success");
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+							$('#user').html(data);
+                        },
+						error : function(xhr, status) {
+							alert('Sorry, there was a problem!');
+						},
+						complete : function(xhr, status) {
+							alert(JSON.stringify(xhr));
+						}
+                    });
+					/*$.ajax('http://localhost:3000/endpoint', {
+					        type: 'POST',
+					        data: JSON.stringify(data),
+					        contentType: 'application/json',
+					        success: function() { console.log('success');},
+					        error  : function() { console.log('error');}
+					});*/
+                });				
+            });
+        </script>
+    </head>
+    <body>
+	<div id="select_div"><a href="#" id="select_link">Test</a></div> 
+        <form method = "post" action = "/endpoint">
+		<fieldset>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your full name" />
+		<br/><br/>
+		<input type="submit" id="submit" value="Send message" />
+		</fieldset>
+	</form>
+	<div id = "user"></div>
+    </body>
+</html>
